@@ -9,7 +9,7 @@ A Primer on Useful Metrics
 Metrics generally come in many shapes and forms.  Deciding what is a useful metric may take time and practice, and evolve over the life of a project.  
 
 = Tools
-On this project we will be using http://www.nagios.org[nagios] to gather system metrics and https://prometheus.io/[prometheus] to gather metrics from openshift, containers and servivces.  
+On this project we will be using http://www.nagios.org[nagios] to gather system metrics and https://prometheus.io/[prometheus] to gather metrics from openshift, containers and services.  
 
 = Example Metrics
 
