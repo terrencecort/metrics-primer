@@ -1,0 +1,47 @@
+A Primer on Useful Metrics
+==========================
+:Author: Terrence Cort
+:Email: <tcort@redhat.com>
+:Date: March 4, 2019
+:Revision: 1.0.0
+
+= Abstract
+Metrics generally come in many shapes and forms.  Deciding what is a useful metric may take time and practice, and evolve over the life of a project.  
+
+= Tools
+On this project we will be using http://www.nagios.org[nagios] to gather system metrics and https://prometheus.io/[prometheus] to gather metrics from openshift, containers and servivces.  
+
+= Example Metrics
+
+=== Application Metrics
+
+==== Error Rate
+* HTTP Error % – Number of web requests that ended in an error 
+* Logged Exceptions – Number of unhandled and logged errors from your application.
+* Thrown Exceptions – Number of all exceptions that have been thrown
+
+==== Count of Application Instances
+When using auto scalling in application infrastracture, knowing how many instances can help to calculate actual cpu usage
+
+==== Request Rate
+Knowing how much traffic a service is recieving can help to troubleshoot performance issues
+
+==== Application Availibility
+Some sort of simple liveness probe can give vital uptime statistics
+
+==== Garbage Collection
+Depending on which language the project is written in, Garbage collection could cause performace problems.
+
+=== Project Metrics
+
+==== Lead Time
+Quatifying how long it takes to get from idea to code delivery.
+
+==== Cycle Time
+How long it takes to implement delivered code.
+
+==== Code Churn
+Tracking the number of lines of code added to or deleted from the project
+
+= Conclusion
+It can be overwhelming to decide what metrics are useful for your development teams.  These metrics may change and evolve based on the performace and usage of each app.  Luckily, with a system like prometheus it is easy to gather a wide range of useful statistics that can be stored and then assembled to create useful metrics.  Once you have the raw historical data, you'll be able to assemble useful metrics over the life of your project with ease.
