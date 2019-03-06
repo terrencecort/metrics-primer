@@ -2,7 +2,7 @@ A Primer on Useful Metrics
 ==========================
 :Author: Terrence Cort
 :Email: <tcort@redhat.com>
-:Date: March 4, 2019
+:Date: March 6, 2019
 :Revision: 1.0.0
 
 = Abstract
@@ -13,7 +13,19 @@ On this project we will be using http://www.nagios.org[nagios] to gather system 
 
 = Example Metrics
 
-=== Application Metrics
+== Cluster Metrics
+
+When evaluating the health of a cluster, resource allocation is a major concern.  Through the use of Quotas, Requests and Limits we can control resource consumption but it's still a good idea to monitor consumption.  A deeper discussion can be found in the http://uncontained.io/articles/openshift-monitoring-guide/[Openshift Monitoring. Guide]
+
+==== Pod Resource Allocation
+Knowing the state, size and locations of pods can help provide data to maximize the compute power of your nodes.
+
+==== Cluster Commitment Level
+Being aware of the consumption of resources can help with the growth or shrinking of the hardware available to the cluster.
+
+== Application Metrics
+
+Application Monitoring can be take a number of forms.  The end goal is to provide proactive and reactive data driven opportunities to alter code. This is a complex topic, and for a more in depth read of the subject refer to http://v1.uncontained.io/playbooks/app_dev/APM_guidance.html[APM guidance].
 
 ==== Error Rate
 * HTTP Error % – Number of web requests that ended in an error 
